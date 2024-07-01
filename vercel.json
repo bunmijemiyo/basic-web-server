@@ -5,9 +5,7 @@
     ],
     "routes": [
       { "src": "/(.*)", "dest": "/app.js" }
-    ],
-    "env": {
-      "ACCESS_TOKEN": "${env.ACCESS_TOKEN}"
-    }
+    ]
+    
   }
   
