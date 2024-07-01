@@ -1,0 +1,13 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "app.js", "use": "@now/node" }
+    ],
+    "routes": [
+      { "src": "/api/hello", "dest": "/app.js" }
+    ],
+    "env": {
+      "ACCESS_TOKEN": "@ACCESS_TOKEN"
+    }
+  }
+  
