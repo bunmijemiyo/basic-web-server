@@ -52,7 +52,7 @@ app.get('/api/hello', async (req, res) => {
     const accessToken = process.env.ACCESS_TOKEN;
     
     
-    console.log('access: ', accessToken)
+    // console.log('access: ', accessToken)
 
     // Normalize IPv4-mapped IPv6 address to IPv4 format (if needed)
     if (clientIp.startsWith('::ffff:')) {
@@ -90,7 +90,7 @@ app.get('/api/hello', async (req, res) => {
         // Send the response as JSON
         res.status(200).json(responseData);
     } catch (error) {
-        console.error('Error fetching IP geolocation:', error.message);
+        console.error('Error fetching IP geolocation:', error);
         res.status(500).json({ error: 'Failed to fetch IP geolocation' });
     }
 });
