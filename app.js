@@ -71,6 +71,10 @@ app.get('/api/hello', async (req, res) => {
         // const { city } = response.data;  // Extract city from the response
 
         const getCity = await axios.get(`http://ip-api.com/json/?fields=61439`)
+        const getCity2 = await axios.get(`http://ip-api.com/json/${clientIpp}?fields=61439`)
+        console.log(getCity2)
+        
+
         // console.log(getCity)
 
         const { city, country } = getCity.data;
