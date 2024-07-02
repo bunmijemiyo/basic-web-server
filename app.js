@@ -91,7 +91,7 @@ app.get('/api/hello', async (req, res) => {
         }
 
         const responseData = {
-            client_ip: clientIp,
+            client_ip: clientIpp,
             location: city || 'Unknown',  // Use city from ipinfo.io response (or default to 'Unknown')
             greeting: greeting
         };
