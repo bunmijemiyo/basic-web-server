@@ -77,7 +77,7 @@ app.get('/api/hello', async (req, res) => {
 
         // console.log(getCity)
 
-        const { city, country } = getCity.data;
+        const { city, country } = getCity2.data;
         // console.log({'city': city, 'country ': country})
 
         const apiUrl = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherAccessToken}&units=metric`);
