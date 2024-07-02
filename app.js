@@ -50,6 +50,11 @@ app.get('/api/hello', async (req, res) => {
     let clientIp = req.ip;  // This gives you the IP address of the requester
     
     const accessToken = process.env.ACCESS_TOKEN;
+
+    // Example of checking X-Forwarded-For header for client IP address
+    let clientIpp = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+    console.log(clientIpp)
+
     
     
     // console.log('access: ', accessToken)
